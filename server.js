@@ -1,12 +1,18 @@
 const express = require('express')
-const app = express()
-const port = 3000;
+const path = require('path');
 const bodyParser = require('body-parser');
-
+const app = express()
+const port = 5000;
+app.set("view engine","ejs");
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render("index");
 })
-
+app.post('/', async(req, res) => {
+    var data=req.body.data;
+    console.log(data);
+})
 app.listen(5000, () => {
   console.log("hi")
 })
