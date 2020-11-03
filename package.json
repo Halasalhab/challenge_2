@@ -1,0 +1,21 @@
+{
+    "name": "csv-report-generator",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Hala salhab",
+    "license": "ISC",
+    "main": "app.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "underscore": "^1.9.1",
+        "objects-to-csv": "^1.3.6"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}
